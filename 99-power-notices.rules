@@ -1,0 +1,3 @@
+# Call the 'udev-power-script.sh' when power status changes
+SUBSYSTEM=="power_supply", ATTR{online}=="0", RUN="/root/bin/udev-power-script.sh 0"
+SUBSYSTEM=="power_supply", ATTR{online}=="1", RUN+="/root/bin/udev-power-script.sh 1"
